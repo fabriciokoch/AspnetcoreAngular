@@ -1,6 +1,0 @@
-*.suo
-*.dg
-/src/WebApp/src/WebApp/bin/Debug/netcoreapp1.0
-/src/WebApp/src/WebApp/obj/Debug/netcoreapp1.0
-/src/WebApp/src/WebApp/project.lock.json
-/src/WebApp/src/WebApp/WebApp.xproj.user
