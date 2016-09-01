@@ -1,7 +1,7 @@
 # AspnetcoreAngular
 A simple CRUD project using asp.net core and angularjs
 
-Create a new project called "WebApp" adn choose a empty template:
+Create a new project called "WebApp" and choose an empty template:
 ![New Project](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image1.png "New Project")
 
 Run the project and you should see a "Hello World!" on your browser.
