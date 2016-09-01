@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/WebApp/src/WebApp/bin/Debug/netcoreapp1.0
+/src/WebApp/src/WebApp/obj/Debug/netcoreapp1.0
+/src/WebApp/.vs/WebApp/v14/.suo
+/src/WebApp/.vs/restore.dg
