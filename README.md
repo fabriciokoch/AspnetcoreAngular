@@ -1,7 +1,7 @@
 # AspnetcoreAngular
 A simple CRUD project using asp.net core and angularjs
 
-STEP-BY-STEP
+# STEP-BY-STEP
 Open your Visual Studio 2015 (make sure you have asp.net core installed) and create a new project called "WebApp" and choose an empty template:
 ![New Project](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image1.png "New Project")
 
@@ -21,3 +21,4 @@ After that, create a MVC Controller called "HomeController" inside a new folder 
 
 Now, we need to create a MVC View Page for the Index action of the HomeController. This way, create a new folder "Views/Home" and add a new MVC View Page into the created folder:
 ![new mvc view](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image7.png "new mvc view")
+![index](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image8.png "index")
