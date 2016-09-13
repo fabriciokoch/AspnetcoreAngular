@@ -29,6 +29,7 @@ Now, let's create a Web API Controller called "PersonController":
 ![personapi](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image9.png "personapi")
 
 After that, create a new folder named "Models", and inside it, create a new class named "PersonModel" that will be our model class for our person api. The class will look like this:
+
 ![personmodel](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image10.png "personmodel") 
 
 After creating our PersonModel class, let's modify the PersonController to use our model class. For this example, we will use only the "GET" method. This way, our PersonController will look like this:
