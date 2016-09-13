@@ -32,9 +32,11 @@ After that, create a new folder named "Models", and inside it, create a new clas
 ![personmodel](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image10.png "personmodel") 
 
 After creating our PersonModel class, let's modify the PersonController to use our model class. For this example, we will use only the "GET" method. This way, our PersonController will look like this:
+
 ![personapimodified](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image11.png "personapimodified") 
 
 Run the project, access http://localhost:PORTNUMBER/api/person and you should see a list of "PersonModel" formatted as JSON:
+
 ![personlist](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image12.png "personlist") 
 
 Continue...
