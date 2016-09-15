@@ -53,3 +53,15 @@ Download and install Nodejs with default options (https://nodejs.org/en/ - I cho
 If everything's ok you should be able to open a cmd prompt and check node and npm version:
 
 ![nodeversion](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image14.png "nodeversion")
+
+Install GruntJS using npm (more info at http://gruntjs.com/getting-started):
+
+![gruntinstall](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image15.png "gruntinstall")
+
+After this, let's tell Visual Studio to use our recently installed tools.
+On Visual Studio, open "Tools -> Options -> Projects and Solution -> External Web Tools" and set "$(PATH)" to be the first option:
+
+![setpath](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image16.png "setpath")
+
+
+continue...
