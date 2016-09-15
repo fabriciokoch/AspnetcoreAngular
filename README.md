@@ -40,4 +40,16 @@ Run the project, access http://localhost:PORTNUMBER/api/person and you should se
 
 ![personlist](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image12.png "personlist") 
 
-Continue...
+So far our project's structure looks like this:
+
+![projectstructure](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image13.png "projectstructure") 
+
+Now, let's create the client-side of our application.
+
+We're gonna use npm to manage our client-side packages and grunt to run tasks that makes our lifes easier. Visual Studio comes already with a version of Node, NPM and GruntJS. But we can't control their version. So, I recommend you to download and install those tools in your computer.
+Let's do this!
+
+Download and install Nodejs with default options (https://nodejs.org/en/ - I choosed v4.5.0 LTS version).
+If everything's ok you should be able to open a cmd prompt and check node and npm version:
+
+![nodeversion](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image14.png "nodeversion")
