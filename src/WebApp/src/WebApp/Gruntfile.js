@@ -23,7 +23,7 @@ module.exports = function (grunt) {
     copy: {
       fonts: {
         files: [
-          { expand: true, cwd: 'node_modules/bootstrap-sass/assets/fonts/', src: ['**'], dest: 'wwwroot/fonts/' }
+          { expand: true, cwd: 'node_modules/bootstrap/dist/fonts/', src: ['**'], dest: 'wwwroot/fonts/' }
         ],
       },
       htmls: {
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
       },
       csss: {
         files: [
-          { expand: true, cwd: 'node_modules/angular-ui-bootstrap/dist/', src: ['**/*.css'], dest: 'wwwroot/Style/' }
+          { expand: true, cwd: 'node_modules/bootstrap/dist/css', src: ['bootstrap.min.css'], dest: 'wwwroot/Style/' }
         ]
       },
     },

@@ -7,3 +7,6 @@
 /src/WebApp/.vs/WebApp/v14/.suo
 /src/WebApp/.vs/restore.dg
 /src/WebApp/src/WebApp/node_modules
+/src/WebApp/src/WebApp/wwwroot/fonts
+/src/WebApp/src/WebApp/wwwroot/Style
+/src/WebApp/src/WebApp/wwwroot/angular.js

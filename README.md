@@ -82,7 +82,7 @@ Now, let's configure "package.json" to set the packages we'll need:
 
     "angular": "1.5.8",
     "angular-route": "1.5.8",
-    "angular-ui-bootstrap": "2.1.3",
+	"bootstrap": "3.3.7",
 
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
@@ -93,15 +93,11 @@ Now, let's configure "package.json" to set the packages we'll need:
 }
 ```
 
-first we have our angular dependencies, then, the dependencies on grunt-tasks the we're gonna use.
+First we have our angular dependencies, then, the dependencies on grunt-tasks the we're gonna use. When you save the "package.json" file Visual Studio run the npm command to restore our client-side packages.
 
 
 After that, let's configure our "Gruntfile.js" to create a default task:
 ```javascript
-/*
-This file in the main entry point for defining grunt tasks and using grunt plugins.
-Click here to learn more. http://go.microsoft.com/fwlink/?LinkID=513275&clcid=0x409
-*/
 module.exports = function (grunt) {
   //load the tasks that we're gonna use
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -123,7 +119,7 @@ module.exports = function (grunt) {
     copy: {
       fonts: {
         files: [
-          { expand: true, cwd: 'node_modules/bootstrap-sass/assets/fonts/', src: ['**'], dest: 'wwwroot/fonts/' }
+          { expand: true, cwd: 'node_modules/bootstrap/dist/fonts/', src: ['**'], dest: 'wwwroot/fonts/' }
         ],
       },
       htmls: {
@@ -133,7 +129,7 @@ module.exports = function (grunt) {
       },
       csss: {
         files: [
-          { expand: true, cwd: 'node_modules/angular-ui-bootstrap/dist/', src: ['**/*.css'], dest: 'wwwroot/Style/' }
+          { expand: true, cwd: 'node_modules/bootstrap/dist/css', src: ['bootstrap.min.css'], dest: 'wwwroot/Style/' }
         ]
       },
     },
@@ -177,3 +173,22 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean', 'copy', 'concat', 'clean:temp']);
 };
 ``` 
+
+With this "Gruntfile.js" we configured a few tasks and a "default" task that will:
+
+- Clean our wwwroot folder;
+- Copy our files (html, fonts and css) to wwwroot;
+- Concatenate angular modules and our app's js files
+- Clean our wwwroot/temp folder;
+
+Now, let's run our "default" task. First, open the Task Runner Explorer: "View -> Other Windows -> Task Runner Explorer" and you'll see our task:
+
+![taskrunnerexplorer](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image19.png "taskrunnerexplorer")
+
+Right-click on "default" and hit "run". This will run our task and create the files in wwwroot folder:
+
+![wwwrootfolder](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image20.png "wwwrootfolder") 
+
+You can see that our "app.js" file isn't there. That's because we don't have yet any source files in the "Script" folder. 
+
+continue...
