@@ -68,7 +68,7 @@ module.exports = function (grunt) {
         src: [
           'wwwroot/temp/modules.js', 'wwwroot/temp/scripts.js'
         ],
-        dest: 'wwwroot/temp/app.js'
+        dest: 'wwwroot/app.js'
       }
     },
   });

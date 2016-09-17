@@ -93,7 +93,7 @@ Now, let's configure "package.json" to set the packages we'll need:
 }
 ```
 
-First we have our angular dependencies, then, the dependencies on grunt-tasks the we're gonna use. When you save the "package.json" file Visual Studio run the npm command to restore our client-side packages.
+First we have our angular dependencies, then, the dependencies on grunt-tasks that we're gonna use. When you save the "package.json" file Visual Studio run the npm command to restore our client-side packages.
 
 
 After that, let's configure our "Gruntfile.js" to create a default task:
@@ -164,7 +164,7 @@ module.exports = function (grunt) {
         src: [
           'wwwroot/temp/modules.js', 'wwwroot/temp/scripts.js'
         ],
-        dest: 'wwwroot/temp/app.js'
+        dest: 'wwwroot/app.js'
       }
     },
   });
@@ -189,6 +189,96 @@ Right-click on "default" and hit "run". This will run our task and create the fi
 
 ![wwwrootfolder](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image20.png "wwwrootfolder") 
 
-You can see that our "app.js" file isn't there. That's because we don't have yet any source files in the "Script" folder. 
+Now, it's time to create our angular page. If you're new to AngularJS, I recommend you to take a look at this [AngularJS tutorial](https://www.codeschool.com/pages/angular-1-vs-2).
+It's also nice to take a look at [John Papa's style guide for AngularJS](https://github.com/johnpapa/angular-styleguide). 
 
-continue...
+Create a new folder named "Scripts/app" under the WebApp project. Then, add a AngularJS module named "app.module.js" into it:
+
+![appmodule](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image21.png "appmodule") 
+
+We don't need to modify the created module, so it should look like this:
+
+```javascript
+(function () {
+  'use strict';
+
+  angular.module('app', [
+      'ngRoute'
+  ]);
+})();
+```
+
+In the same folder, create a AngularJS controller named "person.controller.js":
+
+![personcontroller](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image22.png "personcontroller")
+
+So, our controller will look like this:
+
+```javascript
+(function () {
+  'use strict';
+
+  angular
+      .module('app')
+      .controller('personController', personController);
+
+  function personController() {
+    var vm = this;
+  }
+
+})();
+```
+
+Note that I changed the name of the controller from "person" to "personController". I also removed some comments and unnecessary code.
+
+In the same folder, create a html file named "person.html":
+
+![personhtml](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image23.png "personhtml")
+
+Delete all the person.html code and let only a <h3> title for the page:
+
+```html
+<h3>Person's page</h3>
+```
+
+After that, in the same folder, create a javascript file (there isn't a specific AngularJS template for routes in VisualStudio) named "app.routes.js":
+
+![approutes](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image24.png "approutes")
+
+Our app.route should look like this:
+
+```javascript
+(function () {
+  'use strict';
+
+  angular
+      .module('app')
+      .config(config);
+
+  config.$inject = ['$routeProvider', '$locationProvider'];
+
+  function config($routeProvider, $locationProvider) {
+    $routeProvider
+          .when('/', {
+            templateUrl: 'app/person.html',
+            controller: 'personController',
+            controllerAs: 'vm'
+          })
+  }
+})();
+```
+
+So far, this is what we have:
+
+- app.module: Our application (our main module);
+- person.controller: a controller to handle the person.html;
+- person.html: a page for person;
+- app.routes: an angular route telling angular to use personController and person.html to serve the "/" URL;
+
+Now, modify our Index page to insert our angular app:
+
+![indexwithapp](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image25.png "indexwithapp")
+
+Before move on, let's check if everything is ok. Run defult task (grunt task), then run asp.net application. You should see our "Person's Page" on your browser:
+
+![personspage](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image26.png "personspage")
