@@ -283,4 +283,74 @@ Before move on, let's check if everything is ok. Run defult task (grunt task), t
 
 ![personspage](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image26.png "personspage")
 
-Continue...
+Great! Since everything is working fine, let's move on. Now we're gonna retrieve a list of persons from our Person API (api/person) and show them in the person.html.
+
+So, modify the personControlelr to invoke our API and access our GET method: 
+
+```javascript
+(function () {
+  'use strict';
+
+  angular
+      .module('app')
+      .controller('personController', personController);
+
+  personController.$inject = ['$http'];
+
+  function personController($http) {
+    var vm = this;
+    vm.personList = {};
+
+    vm.getPersonList = function () {
+      $http.get('api/person').then(function successCallback(response) {
+        vm.personList = response.data;
+      }, function errorCallback(response) {
+        vm.personList = {};
+      });
+    };
+
+    vm.getPersonList();
+  }
+
+})();
+
+```
+When the controller is created, we create a personList and try to populate it.
+Note the we injected "$http" into our controller.
+
+Now, modify our person.html to use this personList:
+
+```html
+<h3>Person's page</h3>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Date of Birth</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="person in vm.personList">
+          <td>{{person.firstName}}</td>
+          <td>{{person.lastName}}</td>
+          <td>{{person.dateOfBirth}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+```
+
+Run our grunt task to update files in wwwroot folder, then, run our application and you should see a list of persons in your browser:
+
+![personlist](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image27.png "personlist")
+
+At the end, our project's structure is this:
+
+![projectstructure](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image28.png "projectstructure")
+
+That's it! We've finished our Single Page Application (SPA).
