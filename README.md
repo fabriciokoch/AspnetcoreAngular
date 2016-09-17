@@ -235,7 +235,7 @@ In the same folder, create a html file named "person.html":
 
 ![personhtml](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image23.png "personhtml")
 
-Delete all the person.html code and let only a <h3> title for the page:
+Delete all the person.html code and let only a title for the page:
 
 ```html
 <h3>Person's page</h3>
