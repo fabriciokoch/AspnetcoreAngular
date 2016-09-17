@@ -316,7 +316,7 @@ So, modify the personControlelr to invoke our API and access our GET method:
 
 ```
 When the controller is created, we create a personList and try to populate it.
-Note the we injected "$http" into our controller.
+Note that we injected "$http" into our controller.
 
 Now, modify our person.html to use this personList:
 
