@@ -245,7 +245,7 @@ After that, in the same folder, create a javascript file (there isn't a specific
 
 ![approutes](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image24.png "approutes")
 
-Our app.route should look like this:
+Our app.routes should look like this:
 
 ```javascript
 (function () {
@@ -282,3 +282,5 @@ Now, modify our Index page to insert our angular app:
 Before move on, let's check if everything is ok. Run defult task (grunt task), then run asp.net application. You should see our "Person's Page" on your browser:
 
 ![personspage](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image26.png "personspage")
+
+Continue...
