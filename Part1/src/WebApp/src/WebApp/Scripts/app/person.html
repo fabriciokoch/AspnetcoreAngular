@@ -1,0 +1,22 @@
+﻿<h3>Person's page</h3>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Date of Birth</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="person in vm.personList">
+          <td>{{person.firstName}}</td>
+          <td>{{person.lastName}}</td>
+          <td>{{person.dateOfBirth}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
