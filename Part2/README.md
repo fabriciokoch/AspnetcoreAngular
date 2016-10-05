@@ -1,9 +1,5 @@
-# Part 1 
-Itens in this tutorial:
-* Creating a Single Page Application from scratch;
-* Using asp.net core API and AngularJS;
-* A simpla page that access data from API;
-* Grunt tasks to populate the wwwroot folder with js files, html files and css files;
+# AspnetcoreAngular
+A Single Page Application project using asp.net core and angularjs
 
 # STEP-BY-STEP
 Open your Visual Studio 2015 (make sure you have asp.net core installed) and create a new project called "WebApp" and choose an empty template:
