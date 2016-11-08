@@ -1,8 +1,8 @@
 # Part 1 
 Itens in this tutorial:
 * Creating a Single Page Application from scratch;
-* Using asp.net core API and AngularJS;
-* A simpla page that access data from API;
+* Asp.net core API and AngularJS;
+* A simple page that access data from API;
 * Grunt tasks to populate the wwwroot folder with js files, html files and css files;
 
 # STEP-BY-STEP
