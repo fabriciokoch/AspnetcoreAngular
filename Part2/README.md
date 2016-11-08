@@ -42,7 +42,7 @@ Now, let's add a reference to our WebApp and xUnit packages in our project.json:
 
 Now, modify the PersonModel class to add a new rule to test:
 
-```
+```cs
 public class PersonModel {
 public string FirstName { get; set; }
 public string LastName { get; set; }
@@ -67,7 +67,7 @@ In the Test project, add a new class named "PersonModelTest" to test our "Person
 
 Now, let's create a method to test the rule created before:
 
-```
+```cs
 public class PersonModelTest {
   [Fact]
   public void DateOfBirthShouldBeADateInThePast() {
@@ -89,3 +89,5 @@ Build your project and run all tests like in the image bellow:
 After this, you will be able to see the test result in the Test Explorer window:
 
 ![testexplorer](https://github.com/fabriciokoch/AspnetcoreAngular/blob/master/docs/images/Image32.png "testexplorer")
+
+Now, let's create our integration test for our PersonController API.
