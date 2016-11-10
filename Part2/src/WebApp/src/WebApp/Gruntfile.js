@@ -8,6 +8,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-run');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 
   grunt.initConfig({
     //task to clean wwwroot and wwwroot/temp folder
@@ -49,6 +50,7 @@ module.exports = function (grunt) {
           'node_modules/angular/angular.min.js',
           'node_modules/angular-route/angular-route.min.js',
           'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
+          'node_modules/angular-mocks/angular-mocks.js'
         ],
         dest: 'wwwroot/angular.js'
       },
@@ -71,8 +73,17 @@ module.exports = function (grunt) {
         dest: 'wwwroot/app.js'
       }
     },
+    jasmine: {
+      src: 'wwwroot/app.js',
+      options: {
+        specs: ['Scripts/**/*Spec.js'],
+        vendor: 'wwwroot/angular.js'
+      }
+    }
   });
 
   //register a default task to execute clean, copy, concat and clean:temp tasks
   grunt.registerTask('default', ['clean', 'copy', 'concat', 'clean:temp']);
+  //register a test task to execute jasmine task
+  grunt.registerTask('test', ['jasmine']);
 };
