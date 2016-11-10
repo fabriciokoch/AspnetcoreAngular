@@ -40,3 +40,5 @@
 /Part2/src/WebApp/src/WebApp/project.lock.json
 /Part2/src/WebApp/src/WebApp/WebApp.xproj.user
 /src
+/Part2/src/WebApp/src/WebApp/.grunt/grunt-contrib-jasmine
+/Part2/src/WebApp/src/WebApp/_SpecRunner.html
